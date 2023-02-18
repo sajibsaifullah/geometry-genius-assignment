@@ -25,3 +25,8 @@ function setInCalculationById(serialNo, figureName, area) {
     parentContainer.appendChild(tr);
 
 }
+
+// blog link
+document.getElementById('btn-blog').addEventListener('click', function () {
+    window.location.href = "blog.html";
+})
