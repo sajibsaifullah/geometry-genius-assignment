@@ -19,15 +19,9 @@ function setInCalculationById(serialNo, figureName, area) {
     tr.innerHTML = `
         <td>${serialNo}</td>
         <td>${figureName}</td>
-        <td id="area-value">${area}<small>cm<sup>2</sup></small></td>
+        <td>${area}<small>cm<sup>2</sup></small></td>
         <td id="btn-convert"><button class="btn btn-primary"><small>Convert to m<sup>2</sup></small></button></td>
     `;
     parentContainer.appendChild(tr);
 
-    document.getElementById('btn-convert').addEventListener('click', function () {
-        const areaValue = document.getElementById('area-value');
-        const areaValueString = areaValue.innerText;
-        const convertToSquareMeter = parseFloat(parseFloat(areaValueString) / (100 * 100));
-        areaValue.innerText = convertToSquareMeter;
-    })
 }

@@ -48,7 +48,7 @@ document.getElementById('btn-rectangle').addEventListener('click', function () {
     setInCalculationById(serial, figureName, area);
 })
 
-// parallelogram
+//for parallelogram
 document.getElementById('btn-parallelogram').addEventListener('click', function () {
     serial += 1;
     const inputData = getDataById('fig-parallelogram', 'first-parallelogram-data', 'second-parallelogram-data');
@@ -58,7 +58,7 @@ document.getElementById('btn-parallelogram').addEventListener('click', function 
     setInCalculationById(serial, inputData.figureName, area);
 })
 
-// rhombus
+// for rhombus
 document.getElementById('btn-rhombus').addEventListener('click', function () {
     serial += 1;
     const inputData = getDataById('fig-rhombus', 'first-rhombus-data', 'second-rhombus-data');
@@ -68,7 +68,7 @@ document.getElementById('btn-rhombus').addEventListener('click', function () {
     setInCalculationById(serial, inputData.figureName, area);
 })
 
-// pentagon
+// for pentagon
 document.getElementById('btn-pentagon').addEventListener('click', function () {
     serial += 1;
     const inputData = getDataById('fig-pentagon', 'first-pentagon-data', 'second-pentagon-data');
@@ -78,7 +78,7 @@ document.getElementById('btn-pentagon').addEventListener('click', function () {
     setInCalculationById(serial, inputData.figureName, area);
 })
 
-// ellipse
+// for ellipse
 document.getElementById('btn-ellipse').addEventListener('click', function () {
     serial += 1;
     const inputData = getDataById('fig-ellipse', 'first-ellipse-data', 'second-ellipse-data');
@@ -87,4 +87,3 @@ document.getElementById('btn-ellipse').addEventListener('click', function () {
 
     setInCalculationById(serial, inputData.figureName, area);
 })
-// 
