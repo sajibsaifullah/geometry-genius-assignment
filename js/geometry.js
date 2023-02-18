@@ -91,6 +91,16 @@ document.getElementById('btn-pentagon').addEventListener('click', function () {
 
     setInCalculationById(serial, inputData.figureName, area);
 })
+
+// ellipse
+document.getElementById('btn-ellipse').addEventListener('click', function () {
+    serial += 1;
+    const inputData = getDataById('fig-ellipse', 'first-ellipse-data', 'second-ellipse-data');
+
+    const area = (3.14 * parseFloat(inputData.firstData) * parseFloat(inputData.secondData)).toFixed(2);
+
+    setInCalculationById(serial, inputData.figureName, area);
+})
 // common get data function
 function getDataById(figName, dataOne, dataTwo) {
     const figureName = document.getElementById(figName).innerText;
