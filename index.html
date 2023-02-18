@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header class="container mx-auto mt-4">
+    <header class="container-fluid mx-auto mt-4">
         <nav class="navbar px-3" style="background-color: #e3f2fd;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><span class="fs-3 fw-bold">Interactive</span><br> Geometry Genius</a>
@@ -20,7 +20,7 @@
     </header>
 
     <main>
-        <section class="container mx-auto mt-4">
+        <section class="container-fluid mx-auto mt-4">
             <div class="row">
                 <div class="col-12 col-md-9">
                     <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -30,18 +30,18 @@
                                     <img src="images/triangle.png" class="card-img-top w-50 mt-3" alt="...">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Triangle</h5>
-                                    <p class="card-text">Area (A) = 0.5 * b * h</p>
+                                    <h5 id="fig-triangle" class="card-title">Triangle</h5>
+                                    <p class="card-text">Area (A) = 0.5 X b X h</p>
                                 </div>
                                 <div class="d-flex flex-row mx-4 mb-4">
-                                    <input type="text" aria-label="First name" class="form-control me-2"
+                                    <input id="first-triangle-input" type="text" aria-label="First name" class="form-control me-2"
                                         placeholder="b">
                                     <p>cm</p>
-                                    <input type="text" aria-label="First name" class="form-control mx-2"
+                                    <input id="second-triangle-input" type="text" aria-label="First name" class="form-control mx-2"
                                         placeholder="h">
                                     <p>cm</p>
                                 </div>
-                                <button type="button" class="btn btn-primary">Calculate</button>
+                                <button id="btn-triangle" type="button" class="btn btn-primary m-4">Calculate</button>
                             </div>
                         </div>
                         <div class="col">
@@ -51,7 +51,7 @@
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title">Rectangle</h5>
-                                    <p class="card-text">Area (A) = w * l</p>
+                                    <p class="card-text">Area (A) = w X l</p>
                                 </div>
                                 <div class="d-flex flex-row mx-4 mb-4">
                                     <input type="text" aria-label="First name" class="form-control me-2"
@@ -61,7 +61,7 @@
                                         placeholder="l">
                                     <p>cm</p>
                                 </div>
-                                <button type="button" class="btn btn-primary">Calculate</button>
+                                <button type="button" class="btn btn-primary m-4">Calculate</button>
                             </div>
                         </div>
                         <div class="col">
@@ -70,11 +70,11 @@
                                     <img src="images/parallelogram.png" class="card-img-top w-50 mt-4" alt="...">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Parallelogram</h5>
-                                    <p class="card-text">Area (A) = b * h</p>
+                                    <h5 class="card-title m-3">Parallelogram</h5>
+                                    <p class="card-text">Area (A) = b X h</p>
                                     <p class="card-text">b=10cm, h=12cm</p>
                                 </div>
-                                <button type="button" class="btn btn-primary">Calculate</button>
+                                <button type="button" class="btn btn-primary m-4">Calculate</button>
                             </div>
                         </div>
                         <div class="col">
@@ -84,10 +84,10 @@
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title mt-2">Rhombus</h5>
-                                    <p class="card-text">Area (A) = 0.5 * d <sub>1</sub> * d <sub>2</sub></p>
+                                    <p class="card-text">Area (A) = 0.5 X d <sub>1</sub> X d <sub>2</sub></p>
                                     <p class="card-text">d<sub>1</sub>=16cm, d <sub>2</sub>=8cm</p>
                                 </div>
-                                <button type="button" class="btn btn-primary">Calculate</button>
+                                <button type="button" class="btn btn-primary m-4">Calculate</button>
                             </div>
                         </div>
                         <div class="col">
@@ -97,10 +97,10 @@
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title">Pentagon</h5>
-                                    <p class="card-text">Area (A) = 0.5 * p * b</p>
+                                    <p class="card-text">Area (A) = 0.5 X p X b</p>
                                     <p class="card-text">p=6cm, b=10cm</p>
                                 </div>
-                                <button type="button" class="btn btn-primary">Calculate</button>
+                                <button type="button" class="btn btn-primary m-4">Calculate</button>
                             </div>
                         </div>
                         <div class="col">
@@ -113,7 +113,7 @@
                                     <p class="card-text">Area (A) = πab</p>
                                     <p class="card-text">a=10cm, b=4cm</p>
                                 </div>
-                                <button type="button" class="btn btn-primary">Calculate</button>
+                                <button type="button" class="btn btn-primary m-4">Calculate</button>
                             </div>
                         </div>
                     </div>
@@ -131,7 +131,7 @@
                                     <th scope="col">Button</th>
                                   </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="table-container">
                                   <tr>
                                     <th scope="row">1</th>
                                     <td>Mark</td>
