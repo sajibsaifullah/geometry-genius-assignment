@@ -10,8 +10,6 @@ document.getElementById('btn-triangle').addEventListener('click', function () {
 
     const area = 0.5 * firstInputFieldValue * secondInputFieldValue;
 
-    // console.log(secondInputField);
-
     // input validation
     if (isNaN(firstInputFieldValue) == true || firstInputFieldValue <= 0) {
         return alert('Please input valid data');
@@ -21,13 +19,18 @@ document.getElementById('btn-triangle').addEventListener('click', function () {
     }
 
     // set
+    setInCalculationById(serial, figureName, area);
+})
+
+// set function
+function setInCalculationById(serialNo, figureName, area) {
     const parentContainer = document.getElementById('table-container');
     const tr = document.createElement('tr');
     tr.innerHTML = `
-        <td>${serial}</td>
+        <td>${serialNo}</td>
         <td>${figureName}</td>
         <td>${area}<small>cm<sup>2</sup></small></td>
         <td><button class="btn btn-primary"><small>Convert to m<sup>2</sup></small></button></td>
     `;
     parentContainer.appendChild(tr);
-})
+}
