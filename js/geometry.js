@@ -1,4 +1,5 @@
 let serial = 0;
+
 // for triangle
 document.getElementById('btn-triangle').addEventListener('click', function () {
     serial += 1;
@@ -47,21 +48,6 @@ document.getElementById('btn-rectangle').addEventListener('click', function () {
     setInCalculationById(serial, figureName, area);
 })
 
-// Parallelogram
-/* document.getElementById('btn-parallelogram').addEventListener('click', function () {
-    serial += 1;
-    const figureName = document.getElementById('fig-parallelogram').innerText;
-    const firstData = document.getElementById('first-parallelogram-data').innerText;
-    const secondData = document.getElementById('second-parallelogram-input').innerText;
-
-    const firstDataValue = parseFloat(firstData);
-    const secondDataValue = parseFloat(secondData);
-
-    const area = (firstDataValue * secondDataValue).toFixed(2);
-
-    setInCalculationById(serial, figureName, area);
-
-}) */
 // parallelogram
 document.getElementById('btn-parallelogram').addEventListener('click', function () {
     serial += 1;
@@ -101,29 +87,4 @@ document.getElementById('btn-ellipse').addEventListener('click', function () {
 
     setInCalculationById(serial, inputData.figureName, area);
 })
-// common get data function
-function getDataById(figName, dataOne, dataTwo) {
-    const figureName = document.getElementById(figName).innerText;
-    const firstData = document.getElementById(dataOne).innerText;
-    const secondData = document.getElementById(dataTwo).innerText;
-
-    const inputData = {
-        figureName: figureName,
-        firstData: firstData,
-        secondData: secondData
-    }
-    return inputData;
-}
-
-// common set function
-function setInCalculationById(serialNo, figureName, area) {
-    const parentContainer = document.getElementById('table-container');
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-        <td>${serialNo}</td>
-        <td>${figureName}</td>
-        <td>${area}<small>cm<sup>2</sup></small></td>
-        <td><button class="btn btn-primary"><small>Convert to m<sup>2</sup></small></button></td>
-    `;
-    parentContainer.appendChild(tr);
-}
+// 
