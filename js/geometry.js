@@ -1,5 +1,6 @@
-
+let serial = 0;
 document.getElementById('btn-triangle').addEventListener('click', function () {
+    serial += 1;
     const figureName = document.getElementById('fig-triangle').innerText;
     const firstInputField = document.getElementById('first-triangle-input').value;
     const secondInputField = document.getElementById('second-triangle-input').value;
@@ -23,7 +24,7 @@ document.getElementById('btn-triangle').addEventListener('click', function () {
     const parentContainer = document.getElementById('table-container');
     const tr = document.createElement('tr');
     tr.innerHTML = `
-        <td>${1}</td>
+        <td>${serial}</td>
         <td>${figureName}</td>
         <td>${area}<small>cm<sup>2</sup></small></td>
         <td><button class="btn btn-primary"><small>Convert to m<sup>2</sup></small></button></td>
