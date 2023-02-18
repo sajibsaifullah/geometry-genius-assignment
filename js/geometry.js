@@ -81,6 +81,16 @@ document.getElementById('btn-rhombus').addEventListener('click', function () {
 
     setInCalculationById(serial, inputData.figureName, area);
 })
+
+// pentagon
+document.getElementById('btn-pentagon').addEventListener('click', function () {
+    serial += 1;
+    const inputData = getDataById('fig-pentagon', 'first-pentagon-data', 'second-pentagon-data');
+
+    const area = (0.5 * parseFloat(inputData.firstData) * parseFloat(inputData.secondData)).toFixed(2);
+
+    setInCalculationById(serial, inputData.figureName, area);
+})
 // common get data function
 function getDataById(figName, dataOne, dataTwo) {
     const figureName = document.getElementById(figName).innerText;
