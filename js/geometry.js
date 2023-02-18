@@ -77,7 +77,7 @@ document.getElementById('btn-rhombus').addEventListener('click', function () {
     serial += 1;
     const inputData = getDataById('fig-rhombus', 'first-rhombus-data', 'second-rhombus-data');
 
-    const area = (parseFloat(inputData.firstData) * parseFloat(inputData.secondData)).toFixed(2);
+    const area = (0.5 * parseFloat(inputData.firstData) * parseFloat(inputData.secondData)).toFixed(2);
 
     setInCalculationById(serial, inputData.figureName, area);
 })
